@@ -1,1 +1,2 @@
-# NS4306-NWS01
+# NS4306
+Politeknik Brunei - Network Programming (NS4306)
