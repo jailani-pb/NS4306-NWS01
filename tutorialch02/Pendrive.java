@@ -4,8 +4,11 @@ import java.util.ArrayList;
 
 public class Pendrive {
 	
+	//Name given to the Pendrive
 	private String deviceName;
+	//List of files inside the Pendrive.
 	private ArrayList<String> fileList;
+	//State to identify the Pendrive is connected or not.
 	private boolean connected;
 	
 	public Pendrive(String deviceName) {
