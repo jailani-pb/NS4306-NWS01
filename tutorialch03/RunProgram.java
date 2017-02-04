@@ -417,7 +417,7 @@ public class RunProgram {
 				ArrayList<String> fileList = selectedTelevision.getFileListInUSB();
 				System.out.println("\nPlease choose a file from this USB");
 				for(int fileIndex = 0; fileIndex < fileList.size(); fileIndex++) {
-					System.out.println(fileIndex + ": " + selectedTelevision.getFileInUSB(fileIndex));
+					System.out.println(fileIndex + ": " + fileList.get(fileIndex));
 				}
 				printLastThreeMenus(fileList.size());
 				option = chooseOption(scanner.nextLine(), 0, fileList.size()+2, false);
@@ -515,7 +515,11 @@ public class RunProgram {
 			solidstateModifier = 1;
 		}
 		if(usb instanceof Harddrive) {
-			solidstateModifier = 2;
+			if(((Harddrive) usb).isSolidstate()) {
+				solidstateModifier = 2;
+			} else {
+				solidstateModifier = 1;
+			}
 		}
 		int maxProcessCounter = (9 / usb.getUsbVersion()) / solidstateModifier;
 		int processCounter = 0;
