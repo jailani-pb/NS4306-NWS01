@@ -42,4 +42,12 @@ public class Car {
 		String msg = "I already pressed the brake";
 		return msg;
 	}
+
+	@Override
+	public String toString() {
+		return "Car [colour=" + colour + ", noOfDoors=" + noOfDoors + ", gasMileage=" + gasMileage + ", currentSpeed="
+				+ currentSpeed + ", totalMileage=" + totalMileage + "]";
+	}
+	
+	
 }

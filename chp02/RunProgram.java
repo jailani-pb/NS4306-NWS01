@@ -39,6 +39,8 @@ public class RunProgram {
 				+ firstCar.noOfCarCreated);
 		System.out.println("noOfCarCreated variable in secondCar: " 
 				+ secondCar.noOfCarCreated);
+		
+		System.out.println(secondCar);
 	}
 	
 }
