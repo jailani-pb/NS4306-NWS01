@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Update Existing Product</title>
+</head>
+<body>
+<form th:action="@{'/updateproduct/' + ${product.id}}" method="get">
+	<h2>Update Existing Product</h2>
+	<label>Name:</label>
+	<input type="text" name="name" th:value="${product.name}"/><br><br>
+	<label>Price:</label>
+	<input type="text" name="price" th:value="${product.price}"/><br><br>
+	<label>File:</label>
+	<input type="text" name="file" th:value="${product.picFile}"/><br><br>
+	<label>In Stock:</label>
+	<input type="radio" name="instock" value="true" th:checked="${product.inStock == true}"/> True
+	<input type="radio" name="instock" value="false" th:checked="${product.inStock == false}"/> False<br><br>
+	<button type="submit">Add</button>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delete Existing Product</title>
+</head>
+<body>
+<form action="/deleteproduct" method="get">
+	<h2>Delete Existing Product</h2>
+	<label>ID:</label>
+	<input type="text" name="id"/><br><br>
+	<button type="submit">Delete</button>
+</form>
+<label th:if="${successful == true}">Delete product successful!</label>
+<label th:if="${failed == true}">Delete product failed!</label>
+</body>
+</html>

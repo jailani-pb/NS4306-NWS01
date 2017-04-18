@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add new product</title>
+</head>
+<body>
+<form action="/addproduct" method="get">
+	<h2>Add new product</h2>
+	<label>Name:</label>
+	<input type="text" name="name" /><br><br>
+	<label>Price:</label>
+	<input type="text" name="price" /><br><br>
+	<label>File:</label>
+	<input type="text" name="file" /><br><br>
+	<label>In Stock:</label>
+	<input type="radio" name="instock" value="true"/> True
+	<input type="radio" name="instock" value="false"/> False<br><br>
+	<button type="submit">Add</button>
+</form>
+<label th:if="${successful == true}">Add new product successful!</label>
+<label th:if="${failed == true}">Add new product failed!</label>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
